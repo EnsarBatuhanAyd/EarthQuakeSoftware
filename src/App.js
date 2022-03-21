@@ -3,7 +3,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import firebase1 from "firebase/compat/app";
 import "firebase/compat/firestore";
-import { Viewer, Entity, EntityDescription, PointGraphics } from "resium";
+import {
+  Viewer,
+  Entity,
+  EntityDescription,
+  PointGraphics,
+  BillboardGraphics,
+} from "resium";
 import {
   JulianDate,
   ClockRange,
@@ -12,6 +18,7 @@ import {
   Color,
   Clock,
 } from "cesium";
+import quakeicon from "./quake.png";
 
 function App() {
   const [Nameone, setNameone] = useState("");
@@ -488,12 +495,16 @@ function App() {
         name={Nameone}
         position={Cartesian3.fromDegrees(Longitudeone, Latitudeone, 100)}
       >
-        <PointGraphics
+        <BillboardGraphics
+          image={quakeicon}
+          scale={0.02 * Riskone}
+        ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskone * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -518,12 +529,16 @@ function App() {
         name={Nametwo}
         position={Cartesian3.fromDegrees(Longitudetwo, Latitudetwo, 100)}
       >
-        <PointGraphics
+        <BillboardGraphics
+          image={quakeicon}
+          scale={0.02 * Risktwo}
+        ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Risktwo * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
 
         <EntityDescription>
           <style>{`
@@ -549,12 +564,16 @@ function App() {
         name={Namethree}
         position={Cartesian3.fromDegrees(Longitudethree, Latitudethree, 100)}
       >
-        <PointGraphics
+        <BillboardGraphics
+          image={quakeicon}
+          scale={0.02 * Riskthree}
+        ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskthree * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -579,12 +598,13 @@ function App() {
         name={Namefour}
         position={Cartesian3.fromDegrees(Longitudefour, Latitudefour, 100)}
       >
-        <PointGraphics
+        <BillboardGraphics image={quakeicon} scale={0.02*Riskfour} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskfour * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -609,12 +629,13 @@ function App() {
         name={Namefive}
         position={Cartesian3.fromDegrees(Longitudefive, Latitudefive, 100)}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Riskfive} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskfive * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -639,12 +660,13 @@ function App() {
         name={Namesix}
         position={Cartesian3.fromDegrees(Longitudesix, Latitudesix, 100)}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Risksix} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Risksix * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -669,12 +691,13 @@ function App() {
         name={Nameseven}
         position={Cartesian3.fromDegrees(Longitudeseven, Latitudeseven, 100)}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Riskseven} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskseven * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -699,12 +722,13 @@ function App() {
         name={Nameeight}
         position={Cartesian3.fromDegrees(Longitudeeight, Latitudeeight, 100)}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Riskeight} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskeight * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -729,12 +753,13 @@ function App() {
         name={Namenine}
         position={Cartesian3.fromDegrees(Longitudenine, Latitudenine, 100)}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Risknine} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Risknine * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -759,12 +784,13 @@ function App() {
         name={Nameten}
         position={Cartesian3.fromDegrees(Longitudeten, Latitudeten, 100)}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Riskten} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskten * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -789,12 +815,13 @@ function App() {
         name={Nameeleven}
         position={Cartesian3.fromDegrees(Longitudeeleven, Latitudeeleven, 100)}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Riskeleven} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskeleven * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -819,12 +846,13 @@ function App() {
         name={Nametwelve}
         position={Cartesian3.fromDegrees(Longitudetwelve, Latitudetwelve, 100)}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Risktwelve} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Risktwelve * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
 
         <EntityDescription>
           <style>{`
@@ -853,13 +881,15 @@ function App() {
           Latitudethirteen,
           100
         )}
+
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Riskthirteen} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskthirteen * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -888,12 +918,13 @@ function App() {
           100
         )}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Riskfourteen} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskfourteen * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -922,12 +953,13 @@ function App() {
           100
         )}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Riskfiveteen} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskfiveteen * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -956,12 +988,13 @@ function App() {
           100
         )}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Risksixteen} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Risksixteen * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -990,12 +1023,13 @@ function App() {
           100
         )}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Riskseventeen} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskseventeen * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -1024,12 +1058,13 @@ function App() {
           100
         )}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Riskeighteen} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Riskeighteen * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -1058,12 +1093,13 @@ function App() {
           100
         )}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Risknineteen} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Risknineteen * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
@@ -1088,12 +1124,13 @@ function App() {
         name={Nametwenty}
         position={Cartesian3.fromDegrees(Longitudetwenty, Latitudetwenty, 100)}
       >
-        <PointGraphics
+          <BillboardGraphics image={quakeicon} scale={0.02*Risktwenty} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={Risktwenty * 10}
           color={Color.RED}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
