@@ -1,10 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <style>
+      .credit-container {
+        width: 100vw;
+        height: 17%;
+        
+        position:fixed;
+        background-color:black;
+        left:0;
+        bottom:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .head-title{
+        color:white;
+        font-size: 1.2em;
+        margin:0.2em;
+        font-style:italic;
+      }
+      .brand{
+        width:30em;
+        height:5em;
+        
+        list-style-type:none;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        
+        
+      }
+      .icons-area{
+        display:flex;
+        
+
+      }
+      .iconscolumn{
+        display:flex;
+        flex-direction:row;
+        text-decoration: none;
+        list-style:none;
+
+      }
+      .redpoint{
+        width:1em;
+        height:1em;
+        background-color:red;
+        border-radius: 2em;
+        border-style: solid;
+        border-color:white ;
+        margin:1em;
+      }
+      .greenpoint{
+        width:1em;
+        height:1em;
+        background-color:green;
+        border-radius: 2em;
+        border-width: white;
+        border-style: solid;
+        border-color:white ;
+        margin:1em;
+      }
+      .text{
+        color:white;
+        font-size: 0.7em;
+        margin:2em;
+      }</style>
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -15,6 +83,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -29,6 +98,9 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div class="credit-container"><ul class="brand"><li class="head-title">GLOBAL EARTHQUAKE TRACKING SYSTEM</li>
+    <li class="icons-area">
+    <ul class="iconscolumn"><li class="redpoint"></li><li class="text">EarthQuakes</li><li class="greenpoint"></li><li class="text">Your location</li></ul></li></ul><a ></a></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -40,4 +112,5 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  
 </html>
