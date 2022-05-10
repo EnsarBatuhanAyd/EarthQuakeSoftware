@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/earthquakesoftware/static/css/main.073c9b0a.css",
+    "main.js": "/earthquakesoftware/static/js/main.d86ce468.js",
+    "static/media/quake.png": "/earthquakesoftware/static/media/quake.819d0bfe463373ed0b5a.png",
+    "index.html": "/earthquakesoftware/index.html",
+    "main.073c9b0a.css.map": "/earthquakesoftware/static/css/main.073c9b0a.css.map",
+    "main.d86ce468.js.map": "/earthquakesoftware/static/js/main.d86ce468.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.d86ce468.js"
+  ]
+}
