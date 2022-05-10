@@ -1,24 +1,25 @@
 import "./App.css";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import firebase1 from "firebase/compat/app";
 import "firebase/compat/firestore";
 import {
   Viewer,
   Entity,
   EntityDescription,
-  PointGraphics,
+  // PointGraphics,
   BillboardGraphics,
 } from "resium";
 import {
-  JulianDate,
-  ClockRange,
-  ClockStep,
+  // JulianDate,
+  // ClockRange,
+  // ClockStep,
   Cartesian3,
-  Color,
-  Clock,
+  // Color,
+  // Clock,
 } from "cesium";
 import quakeicon from "./quake.png";
+import homeicon from "./home.png"
 
 function App() {
   const [Nameone, setNameone] = useState("");
@@ -224,6 +225,7 @@ function App() {
     }));
 
     console.log(data);
+  
 
     setLongitudeone(Number(data[0].Longitude));
     setLatitudeone(Number(data[0].Latitude));
@@ -469,12 +471,13 @@ function App() {
         name="Your Location"
         position={Cartesian3.fromDegrees(LiveLatitude, LiveLongitude, 100)}
       >
-        <PointGraphics
+        <BillboardGraphics image={homeicon} scale={1} ></BillboardGraphics>
+        {/* <PointGraphics
           pixelSize={20}
           color={Color.GREEN}
           outlineColor={Color.WHITE}
           outlineWidth={2}
-        ></PointGraphics>
+        ></PointGraphics> */}
         <EntityDescription>
           <style>{`
             .livetext {
