@@ -4,51 +4,52 @@
     
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <style>
       .credit-container {
         width: 100vw;
-        height: 17%;
+        height: 25vh;
         
-        position:fixed;
+        
         background-color:black;
+        position:fixed;
+      
         left:0;
         bottom:0;
         display:flex;
         justify-content: center;
         align-items: center;
       }
-      .head-title{
-        color:white;
-        font-size: 1.2em;
-        margin:0.2em;
-        font-style:italic;
+      .menubar{
+        width:70vw;
+       
+}  
+        @media only screen and (max-width: 768px) {
+          /* For mobile phones: */
+                .menubar{
+                  height:20vh;
+                  width:500vw;
+                  margin-left:275vw
+                  
+                }
+                .credit-container {
+                      width: 100vw;
+                      height: 20vh;
+                      
+                      
+                      background-color:black;
+                      position:fixed;
+                    
+                      left:0;
+                      bottom:0;
+                      display:flex;
+                      justify-content: center;
+                      align-items: center;
       }
-      .brand{
-        width:30em;
-        height:5em;
-        
-        list-style-type:none;
-        display:flex;
-        flex-direction:column;
-        align-items: center;
-        justify-content: center;
-        
-        
-      }
-      .icons-area{
-        display:flex;
-        
-
-      }
-      .iconscolumn{
-        display:flex;
-        flex-direction:row;
-        text-decoration: none;
-        list-style:none;
-
-      }
+          }
+      
       .redpoint{
         width:1em;
         height:1em;
@@ -87,9 +88,9 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <div class="credit-container"><ul class="brand"><li class="head-title">GLOBAL EARTHQUAKE TRACKING SYSTEM</li>
-    <li class="icons-area">
-    <ul class="iconscolumn"><li><img width="50px" src="./quake.png"/></li><li class="text">EarthQuakess</li><li><img width="40px" src="./home.png"/></li><li class="text">Your location</li></ul></li></ul><a ></a></div>
+    <div class="credit-container"> 
+      <img class="menubar" src="%PUBLIC_URL%/trackermenu.png" />
+  </div>
    
   </body>
   

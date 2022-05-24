@@ -204,8 +204,8 @@ function App() {
   const [Latitudetwenty, setLatitudetwenty] = useState(51.477928);
   const [Risktwenty, setRisktwenty] = useState(0);
 
-  const [LiveLatitude, setLiveLatitude] = useState(32.498914);
-  const [LiveLongitude, setLiveLongitude] = useState(37.87154);
+  const [LiveLatitude] = useState(32.498914);
+  const [LiveLongitude] = useState(37.87154);
 
   var firebaseConfig = {
     apiKey: "AIzaSyBgB_ygoRYktn85S5IAKD1VWktQzIqvLGg",
